@@ -23,6 +23,17 @@ print(create_game_field(LEVELS))
 
 min_cell_size = 20
 
+
+class Cell:
+    def __init__(self, level):
+        self.level = level
+        self.inner_cells = self.generate_inner_cells(level)
+
+    def generate_inner_cells(self, level):
+        # TODO
+        return []
+
+
 grid_width = min_cell_size
 for level in range(1, LEVELS + 1):
     border = level
